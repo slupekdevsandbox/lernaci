@@ -1,6 +1,6 @@
 {
   "name": "package-b",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Jacek Slupianek <slupek.dev@windowslive.com>",
   "homepage": "https://github.com/slupekdevsandbox/lernaci#readme",
@@ -10,9 +10,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
   },
