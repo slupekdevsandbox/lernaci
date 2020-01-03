@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "name": "lernaci",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
