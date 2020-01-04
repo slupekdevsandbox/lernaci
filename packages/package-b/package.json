@@ -1,6 +1,6 @@
 {
   "name": "@slupekdevsandbox/package-b",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Jacek Slupianek <slupek.dev@windowslive.com>",
   "homepage": "https://github.com/slupekdevsandbox/lernaci#readme",
@@ -10,7 +10,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },
