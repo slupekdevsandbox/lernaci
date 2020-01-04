@@ -17,7 +17,7 @@ jobs:
       - run: yarn install
       - run: export NPM_TOKEN=${NPM_TOKEN}
       - run: source ~/.profile
-      - run: npm publish --access public
+      - run: yarn lerna publish from-package -y --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
