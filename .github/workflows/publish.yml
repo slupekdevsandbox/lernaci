@@ -18,10 +18,3 @@ jobs:
     - run: yarn lerna publish from-package -y --no-verify-access
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-    - uses: actions/setup-node@v1
-      with:
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@slupekdevsandbox'
-    - run: yarn lerna publish from-package -y --no-verify-access
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
