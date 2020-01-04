@@ -17,7 +17,7 @@ jobs:
       - run: yarn install
       - run: export NPM_TOKEN="${NPM_TOKEN}"
       - run: source ~/.profile
-      - run: yarn yarn lerna publish from-package -y --no-verify-access --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
+      - run: yarn lerna publish from-package -y --no-verify-access --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
