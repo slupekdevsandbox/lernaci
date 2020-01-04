@@ -13,12 +13,13 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/slupekdevsandbox/lernaci.git"
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/slupekdevsandbox/lernaci.git"
+    },
+    "bugs": {
+      "url": "https://github.com/slupekdevsandbox/lernaci/issues"
+    }
   },
-  "bugs": {
-    "url": "https://github.com/slupekdevsandbox/lernaci/issues"
-  }
-  }
+  "gitHead": "08e382a88d82254328dc073163767300f057f8eb"
 }
