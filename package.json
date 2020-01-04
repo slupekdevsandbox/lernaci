@@ -7,5 +7,8 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "publish-ci": "lerna publish from-package -y --no-verify-access"
+  }
 }
