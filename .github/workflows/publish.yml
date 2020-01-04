@@ -16,10 +16,13 @@ jobs:
           always-auth: true
           registry-url: https://registry.npmjs.org
           scope: '@slupekdevsandbox'
-      - run: yarn install
-      - run: export NPM_TOKEN="${NPM_TOKEN}"
-      - run: source ~/.profile
-      - run: yarn lerna publish from-package -y --no-verify-access --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Install dependencies
+        run: yarn install
+      - name: publish
+        run: yarn lerna publish from-package -y --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
