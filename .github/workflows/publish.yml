@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: filipstefansson/set-npm-token-action@v1
+        with:
+          # your npm token
+         token: ${NPM_TOKEN}
       - uses: actions/setup-node@v1
         with:
           node-version: 12
