@@ -14,6 +14,6 @@
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
-  },  
-  "version": "0.0.2-beta.5"
+  },
+  "version": "0.0.2-beta.6"
 }
