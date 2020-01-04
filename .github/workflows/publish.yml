@@ -9,20 +9,15 @@ jobs:
     name: Publish NPM
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          always-auth: true
-          registry-url: https://registry.npmjs.org
-          scope: '@slupekdevsandbox'
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      - name: Install dependencies
-        run: yarn install
-      - name: publish
-        run: npm run lerna publish from-package -y --no-verify-access
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        registry-url: 'https://registry.npmjs.org'
+        token: '${{secrets.npm_token}}'
+    - run: yarn install
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+    - run: yarn test
+    - run: yarn lerna publish from-package -y --no-verify-access
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}      
