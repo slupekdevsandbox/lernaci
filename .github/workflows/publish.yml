@@ -15,8 +15,6 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
         token: '${{secrets.npm_token}}'
     - run: yarn install
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
     - run: yarn lerna publish from-package -y --no-verify-access
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}      
