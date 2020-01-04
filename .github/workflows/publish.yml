@@ -15,13 +15,7 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
         #token: '${{secrets.npm_token}}'
     - run: yarn install
-    - run: yarn lerna publish from-package -y --no-verify-access
+    - name: Publish to NPMJS
+      run: yarn lerna publish from-package -y --no-verify-access
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-    - uses: actions/setup-node@v1
-      with:
-        registry-url: 'https://npm.pkg.github.com/'
-        scope: '@slupekdevsandbox'
-    - run: yarn lerna publish from-package -y --no-verify-access
-      env:
-        NODE_AUTH_TOKEN: ${{ github.token }}
