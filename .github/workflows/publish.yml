@@ -15,6 +15,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn
-      - run: yarn publish-ci
+      - run: yarn lerna publish --yes --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
