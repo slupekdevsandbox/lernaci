@@ -18,7 +18,8 @@
     "clean": "lerna clean",
     "clean:build": "lerna exec -- rimraf lib",
     "ls": "lerna ls",
-    "publish-ci": "lerna publish from-package -y --no-verify-access"
+    "publish-ci": "lerna publish from-package -y --no-verify-access",
+    "update-version": "lerna version --conventional-commits --create-release github"
   },
   "config": {
     "commitizen": {
