@@ -1,11 +1,8 @@
-name: CI
+name: Publish NPM
 
 on:
   release:
     types: [published]  
-  #push:
-  #  branches:
-  #  - master
 jobs:
   publish-npm:
     name: Publish NPM

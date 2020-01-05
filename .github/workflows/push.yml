@@ -1,8 +1,11 @@
 name: Publish
 
 on:
-  release:
-    types: [prereleased]
+  push:
+    branches:
+      - '*/*'
+      -  '*'
+      - '!master' 
 
 jobs:
   build:
@@ -14,6 +17,5 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: yarn install
-      - run: yarn lerna publish from-package --registry https://registry.npmjs.org/:_authToken=${NPM_TOKEN}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
