@@ -1,8 +1,6 @@
 {
   "devDependencies": {
-    "@changesets/cli": "^2.4.1",
     "commitizen": "^4.0.3",
-    "conventional-changelog-cli": "^2.0.31",
     "git-cz": "^3.3.0",
     "lerna": "^3.20.2"
   },
