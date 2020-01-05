@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@geut/foo": "^0.0.1-beta.4"
+    "@slupekdevsandbox/package-b": "^0.0.2-beta.5"
   },
   "author": "",
   "license": "ISC",
