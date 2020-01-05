@@ -16,6 +16,6 @@ jobs:
         #token: '${{secrets.npm_token}}'
     - run: yarn install
     - name: Publish to NPMJS
-      run: yarn lerna publish from-package -y --no-verify-access
+      run: yarn publish-ci
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}

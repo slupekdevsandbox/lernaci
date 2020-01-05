@@ -10,6 +10,12 @@
     "packages/*"
   ],
   "scripts": {
+    "commit": "npx git-cz",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "test": "lerna run test",
+    "clean": "lerna clean",
+    "clean:build": "lerna exec -- rimraf lib",
+    "ls": "lerna ls",
     "publish-ci": "lerna publish from-package -y --no-verify-access"
   }
 }
