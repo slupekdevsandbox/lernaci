@@ -10,7 +10,6 @@
       "message": "chore(release): %s"
     },
     "version": {
-      "push": false,
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
