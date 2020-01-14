@@ -12,4 +12,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         registry-url: 'https://registry.npmjs.org'
-    - run: yarn install --frozen-lockfile
+    - name: Dump release name
+      env:
+        JOB_CONTEXT: ${{ toJson(job) }}
+      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
