@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-beta.10](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.2-beta.9...v0.0.2-beta.10) (2020-01-14)
+
+
+### Features
+
+* **build:** test beta version publish ([5f0cff8](https://github.com/slupekdevsandbox/lernaci/commit/5f0cff813ac9c5a5c41675cfb0fc7f0fb5fd7a87))
+
+
+
+
+
+
 ## [0.0.2-beta.9](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.2-beta.8...v0.0.2-beta.9) (2020-01-05)
 
 **Note:** Version bump only for package @slupekdevsandbox/package-a
