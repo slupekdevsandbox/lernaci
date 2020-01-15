@@ -13,7 +13,7 @@ jobs:
       with:
         registry-url: 'https://registry.npmjs.org'
     - run: yarn install --frozen-lockfile
-    - name: Publish to NPMJS
-      run: yarn publish-ci
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+    #- name: Publish to NPMJS
+    # run: yarn publish-ci
+    #  env:
+    #    NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
