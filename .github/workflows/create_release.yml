@@ -34,3 +34,5 @@ jobs:
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
       run: yarn lerna publish -y --no-verify-access --force-publish --canary --dist-tag "$PREID"     
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
