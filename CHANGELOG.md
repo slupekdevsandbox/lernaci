@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.5...v0.0.6) (2020-01-15)
+
+
+### Bug Fixes
+
+* **build:** update publish script ([d0a68cc](https://github.com/slupekdevsandbox/lernaci/commit/d0a68cc678f469f8006e01069d678eb0bd67cfd6))
+
+
+
+
+
 ## [0.0.5](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.3...v0.0.5) (2020-01-15)
 
 
