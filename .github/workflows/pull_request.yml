@@ -13,6 +13,6 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
-      run: yarn lerna publish from-package -y --no-verify-access --canary
+      run: yarn lerna publish -y --no-verify-access --canary
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
