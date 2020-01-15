@@ -33,12 +33,12 @@ jobs:
     #    echo ${{ env.PREID }}
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
-      if: ${{ steps.check-tag.outputs.PREID }}
+      if: steps.check-tag.outputs.PREID
       run: yarn lerna publish -y --no-verify-access --force-publish --dist-tag "$PREID" --preid "$PREID"    
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
     - name: Publish to NPMJS
-      if: ${{ steps.check-tag.outputs.PREID }} == ''
+      if: steps.check-tag.outputs.PREID == ''
       run: yarn lerna publish -y --no-verify-access --force-publish   
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
