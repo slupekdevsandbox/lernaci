@@ -16,7 +16,7 @@
     "clean": "lerna clean",
     "clean:build": "lerna exec -- rimraf lib",
     "ls": "lerna ls",
-    "publish-ci": "lerna publish from-package -y --no-verify-access --canary",
+    "publish-ci": "lerna publish from-package -y --no-verify-access",
     "update-version": "lerna version --conventional-commits --create-release github",
     "version:upgrade": "lerna run build && lerna version --conventional-commits --no-push",
     "version:upgrade-push": "lerna run build && lerna version --conventional-commits --create-release github"
