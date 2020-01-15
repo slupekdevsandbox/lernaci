@@ -1,5 +1,5 @@
 const foo = require('@slupekdevsandbox/package-b')
 
 console.log('geut: baz')
-console.log('geut: code with x')
+console.log('geut: code with ssx')
 foo()
