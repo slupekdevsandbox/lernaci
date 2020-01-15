@@ -22,18 +22,23 @@ jobs:
       id: check-tag
       run: |
         if [[ "$RELEASE_VERSION" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)(\-([a-zA-Z]+)(\.[0-9]+)?)?$ ]]; then
-          echo ::set-env name=PREID::$(echo ${BASH_REMATCH[5]})
+          echo ::set-output name=PREID::$(echo ${BASH_REMATCH[5]})
             printf 'Got %s, %s and %s\n' \
             "${BASH_REMATCH[1]}" "${BASH_REMATCH[4]}" "${BASH_REMATCH[5]}" 
         fi
         printf 'Got\n'
-    - name: Test PREID
-      run: |
-        echo $PREID
-        echo ${{ env.PREID }}
+    #- name: Test PREID
+    #  run: |
+    #    echo $PREID
+    #    echo ${{ env.PREID }}
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
-      if: $PREID != ''
+      if: ${{ steps.check-tag.outputs.PREID }}
       run: yarn lerna publish -y --no-verify-access --force-publish --dist-tag "$PREID" --preid "$PREID"    
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+    - name: Publish to NPMJS
+      if: ${{ steps.check-tag.outputs.PREID }} == ''
+      run: yarn lerna publish -y --no-verify-access --force-publish   
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
