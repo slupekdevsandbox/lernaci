@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/slupekdevsandbox/lernaci/compare/v1.0.2-beta.1...v0.0.9) (2020-01-15)
+
+
+### Features
+
+* **build:** test new build ([9f300f8](https://github.com/slupekdevsandbox/lernaci/commit/9f300f87dbc3f0f672c430c6207b0c17603499d4))
+
+
+
+
+
 ## [0.0.8](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.7...v0.0.8) (2020-01-15)
 
 **Note:** Version bump only for package lernaci
