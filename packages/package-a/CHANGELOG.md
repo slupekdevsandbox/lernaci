@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.21](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.9...v0.0.21) (2020-01-15)
+
+**Note:** Version bump only for package @slupekdevsandbox/package-a
+
+
+
+
+
 ## [0.0.9](https://github.com/slupekdevsandbox/lernaci/compare/v1.0.2-beta.1...v0.0.9) (2020-01-15)
 
 
