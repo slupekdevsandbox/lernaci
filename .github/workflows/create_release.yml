@@ -33,4 +33,4 @@ jobs:
         echo ${{ env.PREID }}
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
-      run: yarn lerna publish -y --no-verify-access --canary --dist-tag "$PREID"     
+      run: yarn lerna publish -y --no-verify-access --force-publish --canary --dist-tag "$PREID"     
