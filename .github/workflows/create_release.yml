@@ -12,23 +12,14 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         registry-url: 'https://registry.npmjs.org'
-    - name: Set env
-      run: echo ::set-env name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
-    - name: Test
-      run: |
-        echo $RELEASE_VERSION
-        echo ${{ env.RELEASE_VERSION }}
-    - name: Set env.PREID
-      id: check-tag
+    - name: Get preid value
+      id: vars
       run: |
         if [[ "${GITHUB_REF:10}" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)(\-([a-zA-Z]+)(\.[0-9]+)?)?$ ]]; then
-          echo ::set-env name=PREID::$(echo ${BASH_REMATCH[5]})
-            printf 'Got %s, %s and %s\n' \
-            "${BASH_REMATCH[1]}" "${BASH_REMATCH[4]}" "${BASH_REMATCH[5]}" 
+          echo ::set-output name=PREID::$(echo ${BASH_REMATCH[5]})
         fi
-        printf 'Got\n'
     - run: yarn install --frozen-lockfile
     - name: Publish to NPMJS
-      run: yarn publish-ci -- --dist-tag "$PREID" --preid "$PREID"
+      run: yarn publish-ci -- --dist-tag "${{ steps.vars.outputs.PREID }}" --preid "${{ steps.vars.outputs.PREID }}"
       env:
         NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
