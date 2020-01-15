@@ -1,6 +1,6 @@
 {
   "name": "@slupekdevsandbox/package-b",
-  "version": "0.0.22-beta.0",
+  "version": "0.0.23-beta.0",
   "description": "nothing to see here.",
   "main": "index.js",
   "scripts": {
