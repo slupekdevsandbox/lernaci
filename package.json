@@ -20,7 +20,7 @@
     "publish-ci": "lerna publish from-package -y --no-verify-access",
     "update-version": "lerna version --conventional-commits --create-release github",
     "version:upgrade": "lerna run build && lerna version --conventional-commits --no-push",
-    "version:upgrade-push": "env-cmd lerna run build && lerna version --conventional-commits --create-release github"
+    "version:upgrade-push": "lerna run build && lerna version --conventional-commits --create-release github"
   },
   "config": {
     "commitizen": {
