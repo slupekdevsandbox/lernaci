@@ -1,13 +1,13 @@
 {
   "name": "@slupekdevsandbox/package-a",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "nothing to see here",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@slupekdevsandbox/package-b": "^0.0.31"
+    "@slupekdevsandbox/package-b": "^0.0.32"
   },
   "author": "",
   "license": "ISC",
