@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.29](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.28...v0.0.29) (2020-01-20)
+
+
+### Bug Fixes
+
+* update index ([deba6f1](https://github.com/slupekdevsandbox/lernaci/commit/deba6f1223734bf45638085a5ab058be7519b548))
+
+
+
+
+
 ## [0.0.28](https://github.com/slupekdevsandbox/lernaci/compare/v0.0.27-beta.3...v0.0.28) (2020-01-15)
 
 **Note:** Version bump only for package lernaci
